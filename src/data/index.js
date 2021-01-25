@@ -1,9 +1,20 @@
-export { position } from "./order/position";
-export { rank } from "./order/rank";
-export { airСategory } from "./order/airСategory";
-export { seniorityBonus } from "./order/seniorityBonus";
-export { encryptionAuthorities } from "./order/encryptionAuthorities";
-export { premium } from "./order/premium";
-export { divisionsProtection } from "./order/divisionsProtection";
-export { classQualification } from "./order/classQualification";
-export { stateSecret } from "./order/stateSecret";
+export { airСategory } from "./order/airСategory"; // +
+export { classQualification } from "./order/classQualification"; // +
+export { districtCoefficient } from "./order/districtCoefficient"; // +
+export { divisionsProtection } from "./order/divisionsProtection"; // +
+export { driversPositions } from "./order/driversPositions"; // +
+export { encryptionAuthorities } from "./order/encryptionAuthorities"; // +
+export { farNorth } from "./order/farNorth"; // +
+export { flightPersonnel } from "./order/flightPersonnel"; // +
+export { legalEducation } from "./order/legalEducation"; // +
+export { marksOfExcellence } from "./order/marksOfExcellence"; // +
+export { militaryAcademy } from "./order/militaryAcademy"; // +
+export { physicalFitness } from "./order/physicalFitness"; // +
+export { position } from "./order/position"; // +
+export { positions1_4tr } from "./order/positions1_4tr"; // +
+export { premium } from "./order/premium"; // +
+export { rank } from "./order/rank"; // +
+export { riskToLife } from "./order/riskToLife";
+export { seniorityBonus } from "./order/seniorityBonus"; // +
+export { specialConditions } from "./order/specialConditions"; // +
+export { stateSecret } from "./order/stateSecret"; // +

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Picker } from "native-base";
+import { Form, Item, Picker } from "native-base";
 import { StyleSheet, View, Text } from "react-native";
 import { useDispatch } from "react-redux";
 
@@ -10,20 +10,28 @@ export const Dropdown = ({ data, title, action }) => {
   return (
     <View style={styles.wrapper}>
       <Text style={styles.title}>{`${title}: ${salaries}`}</Text>
-      <Picker
-        mode="dropdown"
-        placeholder="Select your SIM"
-        selectedValue={salaries}
-        style={styles.picker}
-        onValueChange={(itemValue) => {
-          setSalaries(itemValue);
-          dispatch(action(itemValue));
-        }}
-      >
-        {data.map((item) => (
-          <Picker.Item label={item.label} value={item.value} key={item.label} />
-        ))}
-      </Picker>
+      <Form>
+        <Item picker>
+          <Picker
+            mode="dropdown"
+            placeholder="Select your SIM"
+            selectedValue={salaries}
+            style={styles.picker}
+            onValueChange={(itemValue) => {
+              setSalaries(itemValue);
+              dispatch(action(itemValue));
+            }}
+          >
+            {data.map((item) => (
+              <Picker.Item
+                label={item.label}
+                value={item.value}
+                key={item.label}
+              />
+            ))}
+          </Picker>
+        </Item>
+      </Form>
     </View>
   );
 };

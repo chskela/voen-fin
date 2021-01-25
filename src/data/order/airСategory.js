@@ -3,7 +3,7 @@ export const airСategory = {
   data: [
     {
       label: "Укажите квалификационную категорию (для летного состава)",
-      value: 0,
+      value: 1,
     },
     {
       label:
@@ -17,7 +17,7 @@ export const airСategory = {
     },
     {
       label: "Летчик (штурман)-снайпер - 1.3",
-      value: 1.2,
+      value: 1.3,
     },
     {
       label: "Бортовой специалист второго класса - 1.1",

@@ -1,4 +1,4 @@
-export const divisionsProtectionpremium = {
+export const premium = {
   title:
     "Премия за добросовестное и эффективное исполнение должностных обязанностей",
   data: [
