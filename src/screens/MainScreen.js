@@ -26,7 +26,7 @@ export const MainScreen = ({ navigation }) => {
                 style={{ height: 300, width: "100%", flex: 1 }}
               />
             </CardItem>
-            <CardItem cardBody>
+            <CardItem footer>
               <Text>Калькулятор денежного довольствия</Text>
             </CardItem>
           </Card>
@@ -43,7 +43,7 @@ export const MainScreen = ({ navigation }) => {
                 style={{ height: 300, width: "100%", flex: 1 }}
               />
             </CardItem>
-            <CardItem cardBody>
+            <CardItem footer>
               <Text>Калькулятор военной пенсии</Text>
             </CardItem>
           </Card>

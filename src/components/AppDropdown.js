@@ -3,7 +3,7 @@ import { Form, Item, Picker } from "native-base";
 import { StyleSheet, View, Text } from "react-native";
 import { useDispatch } from "react-redux";
 
-export const Dropdown = ({ data, title, action }) => {
+export const AppDropdown = ({ data, title, action }) => {
   const dispatch = useDispatch();
   const [salaries, setSalaries] = useState(data[0].value);
 

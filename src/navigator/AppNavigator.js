@@ -24,24 +24,11 @@ export const AppNavigator = () => {
           name="Main"
           component={MainScreen}
           options={{
-            header: ({ navigation }) => (
+            header: () => (
               <Header>
-                {/* <Left>
-                  <Button
-                    transparent
-                    onPress={() => navigation.navigate("PayCalculator")}
-                  >
-                    <Icon name="arrow-back" />
-                  </Button>
-                </Left> */}
                 <Body>
                   <Title>Финансы военнослужащего</Title>
                 </Body>
-                {/* <Right>
-                  <Button transparent>
-                    <Icon name="menu" />
-                  </Button>
-                </Right> */}
               </Header>
             ),
           }}
@@ -61,22 +48,42 @@ export const AppNavigator = () => {
                   </Button>
                 </Left>
                 <Body>
-                  <Title>Калькулятор денежного довольствия</Title>
+                  <Title>Калькулятор</Title>
                 </Body>
-                {/* <Right>
+                <Right>
                   <Button transparent>
                     <Icon name="menu" />
                   </Button>
-                </Right> */}
+                </Right>
               </Header>
             ),
           }}
-          // options={{ title: "Калькулятор денежного довольствия" }}
         />
         <Stack.Screen
           name="PensionCalculator"
           component={PensionCalculatorScreen}
-          options={{ title: "Калькулятор денежного довольствия" }}
+          options={{
+            header: ({ navigation }) => (
+              <Header>
+                <Left>
+                  <Button
+                    transparent
+                    onPress={() => navigation.navigate("Main")}
+                  >
+                    <Icon name="arrow-back" />
+                  </Button>
+                </Left>
+                <Body>
+                  <Title>Калькулятор</Title>
+                </Body>
+                <Right>
+                  <Button transparent>
+                    <Icon name="menu" />
+                  </Button>
+                </Right>
+              </Header>
+            ),
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
