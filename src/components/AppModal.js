@@ -1,23 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, StyleSheet, Modal } from "react-native";
-import { Image, TouchableOpacity, ScrollView } from "react-native";
+import { Card, CardItem, Body, Text, Title, Icon } from "native-base";
 
+import { THEME } from "../theme";
 import { AppButton } from "./AppButton";
-import {
-  Container,
-  Header,
-  Content,
-  Card,
-  CardItem,
-  Body,
-  Text,
-  Title,
-  H3,
-  Button,
-  Icon,
-} from "native-base";
 
-export const AppModal = ({ visible, onCancel }) => {
+export const AppModal = ({ visible, onCancel, result = 0 }) => {
   return (
     <Modal animationType="slide" transparent={true} visible={visible}>
       <View style={styles.centeredView}>
@@ -29,7 +17,7 @@ export const AppModal = ({ visible, onCancel }) => {
           </CardItem>
           <CardItem cardBody>
             <Body style={styles.body}>
-              <Text style={styles.textStyle}>20000</Text>
+              <Text style={styles.textStyle}>{result}</Text>
               <View style={styles.textStyle}>
                 <Icon
                   style={styles.colorPrimary}
@@ -63,7 +51,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textStyle: {
-    color: "#3F51B5",
+    color: THEME.primaryColor,
     marginBottom: 10,
     marginTop: 10,
     marginHorizontal: 5,
@@ -75,6 +63,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   colorPrimary: {
-    color: "#3F51B5",
+    color: THEME.primaryColor,
   },
 });

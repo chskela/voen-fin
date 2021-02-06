@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { Button, Icon } from "native-base";
+import { THEME } from "../theme";
 
 export const AppButton = ({ text, icon, onPress }) => {
   return (
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
   textButton: {
     paddingLeft: 15,
     paddingRight: 20,
-    color: "#3F51B5",
+    color: THEME.primaryColor,
     fontSize: 20,
   },
 });

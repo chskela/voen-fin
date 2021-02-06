@@ -1,25 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Item, Picker } from "native-base";
 import { StyleSheet, View, Text } from "react-native";
-import { useDispatch } from "react-redux";
 
-export const AppDropdown = ({ data, title, action }) => {
-  const dispatch = useDispatch();
-  const [salaries, setSalaries] = useState(data[0].value);
-
+export const AppDropdown = ({ data, title, cb, currentValue }) => {
   return (
     <View style={styles.wrapper}>
-      <Text style={styles.title}>{`${title}: ${salaries}`}</Text>
+      <Text style={styles.title}>{`${title}: ${currentValue}`}</Text>
       <Form>
         <Item picker>
           <Picker
             mode="dropdown"
             placeholder="Select your SIM"
-            selectedValue={salaries}
+            selectedValue={currentValue}
             style={styles.picker}
             onValueChange={(itemValue) => {
-              setSalaries(itemValue);
-              dispatch(action(itemValue));
+              cb(itemValue);
             }}
           >
             {data.map((item) => (

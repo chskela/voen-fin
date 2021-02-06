@@ -1,14 +1,6 @@
 import React from "react";
 import { View, Image, TouchableOpacity, ScrollView } from "react-native";
-import {
-  Container,
-  Header,
-  Content,
-  Card,
-  CardItem,
-  Body,
-  Text,
-} from "native-base";
+import { Card, CardItem, Text } from "native-base";
 
 export const MainScreen = ({ navigation }) => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
-import { Provider } from "react-redux";
-import store from "./src/app/store";
+// import { Provider } from "react-redux";
+// import store from "./src/app/store";
 import { AppNavigator } from "./src/navigator/AppNavigator";
 
 export default function App() {
@@ -16,8 +16,8 @@ export default function App() {
     return null;
   }
   return (
-    <Provider store={store}>
-      <AppNavigator />
-    </Provider>
+    // <Provider store={store}>
+    <AppNavigator />
+    // </Provider>
   );
 }
